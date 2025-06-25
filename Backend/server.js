@@ -36,14 +36,14 @@ app.use(morgan('dev'));
 
 // CORS configuration
 const allowedOrigins = [
-  'http://54.166.206.245:7771',
-  'http://54.166.206.245:7772',
-  'http://54.166.206.245:7773',
-  'http://54.166.206.245:3221',
-  'http://localhost:7771',
-  'http://localhost:7772',
-  'http://localhost:7773',
-  'http://127.0.0.1:5500'
+  'http://13.60.168.103:7771',
+  'http://13.60.168.103:7772',
+  'http://13.60.168.103:7773',
+  'http://13.60.168.103:3221',
+  'http://13.60.168.103:7771',
+  'http://13.60.168.103:7772',
+  'http://13.60.168.103:7773',
+  'http://13.60.168.103:5500'
 ];
 
 app.use(cors({
@@ -62,7 +62,7 @@ const pool = new Pool({
   user: process.env.DB_USER || 'postgres',
   host: process.env.PG_HOST || 'postgres',
   database: process.env.DB_NAME || 'new_employee_db',
-  password: process.env.DB_PASSWORD || 'admin123',
+  password: process.env.DB_PASSWORD || 'admin321',
   port: process.env.DB_PORT || 5432,
   ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false
 });
